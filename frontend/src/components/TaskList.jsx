@@ -1,45 +1,109 @@
-import { useAuth } from '../context/AuthContext';
 import axiosInstance from '../axiosConfig';
+import { useAuth } from '../context/AuthContext';
 
-const TaskList = ({ tasks, setTasks, setEditingTask }) => {
+const TaskList = ({
+  tasks,
+  setTasks,
+}) => {
+
   const { user } = useAuth();
 
-  const handleDelete = async (taskId) => {
+  const handleDelete = async (id) => {
+
     try {
-      await axiosInstance.delete(`/api/tasks/${taskId}`, {
-        headers: { Authorization: `Bearer ${user.token}` },
-      });
-      setTasks(tasks.filter((task) => task._id !== taskId));
-    } catch (error) {
-      alert('Failed to delete task.');
+
+      await axiosInstance.delete(
+        `/api/playlists/${id}`,
+        {
+          headers: {
+            Authorization:
+            `Bearer ${user.token}`,
+          },
+        }
+      );
+
+      setTasks(
+        tasks.filter(
+          (playlist) =>
+          playlist._id !== id
+        )
+      );
+
     }
+
+    catch {
+
+      alert(
+        'Delete failed'
+      );
+
+    }
+
   };
 
   return (
+
     <div>
-      {tasks.map((task) => (
-        <div key={task._id} className="bg-gray-100 p-4 mb-4 rounded shadow">
-          <h2 className="font-bold">{task.title}</h2>
-          <p>{task.description}</p>
-          <p className="text-sm text-gray-500">Deadline: {new Date(task.deadline).toLocaleDateString()}</p>
-          <div className="mt-2">
-            <button
-              onClick={() => setEditingTask(task)}
-              className="mr-2 bg-yellow-500 text-white px-4 py-2 rounded"
+
+      {
+
+        tasks.map(
+          (playlist) => (
+
+            <div
+              key={playlist._id}
+              className="bg-gray-100 p-4 rounded mb-4"
             >
-              Edit
-            </button>
-            <button
-              onClick={() => handleDelete(task._id)}
-              className="bg-red-500 text-white px-4 py-2 rounded"
-            >
-              Delete
-            </button>
-          </div>
-        </div>
-      ))}
+
+              <h2 className="font-bold">
+
+                {playlist.title}
+
+              </h2>
+
+              <p>
+
+                {playlist.description}
+
+              </p>
+
+              <p>
+
+                Videos:
+
+                {
+
+                  playlist.videos?.length || 0
+
+                }
+
+              </p>
+
+              <button
+                onClick={() =>
+                  handleDelete(
+                    playlist._id
+                  )
+                }
+                className="bg-red-500 text-white px-3 py-1 rounded mt-2"
+              >
+
+                Delete
+
+              </button>
+
+            </div>
+
+          )
+
+        )
+
+      }
+
     </div>
+
   );
+
 };
 
 export default TaskList;
