@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import axiosInstance from '../axiosConfig';
 
-const TaskForm = ({ playlists, setPlaylists }) => {
+const PlaylistForm = ({ playlists, setPlaylists }) => {
   const { user } = useAuth();
 
   const [formData, setFormData] = useState({
@@ -87,4 +87,4 @@ const TaskForm = ({ playlists, setPlaylists }) => {
 
 };
 
-export default TaskForm;
+export default PlaylistForm;

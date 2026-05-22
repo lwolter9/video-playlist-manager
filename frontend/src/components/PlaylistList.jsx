@@ -1,7 +1,7 @@
 import axiosInstance from '../axiosConfig';
 import { useAuth } from '../context/AuthContext';
 
-const TaskList = ({ tasks, setTasks }) => {
+const PlaylistList = ({ tasks, setTasks }) => {
   const { user } = useAuth();
 
   const authHeader = {
@@ -116,4 +116,4 @@ const TaskList = ({ tasks, setTasks }) => {
   );
 };
 
-export default TaskList;
+export default PlaylistList;

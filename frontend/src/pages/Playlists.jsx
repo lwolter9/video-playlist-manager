@@ -5,9 +5,9 @@ useState,
 
 import axiosInstance from '../axiosConfig';
 
-import TaskForm from '../components/TaskForm';
+import PlaylistForm from '../components/PlaylistForm';
 
-import TaskList from '../components/TaskList';
+import PlaylistList from '../components/PlaylistList';
 
 import { useAuth }
 from '../context/AuthContext';
@@ -73,12 +73,12 @@ return (
 
 <div className="container mx-auto p-6">
 
-<TaskForm
+<PlaylistForm
 playlists={tasks}
 setPlaylists={setTasks}
 />
 
-<TaskList
+<PlaylistList
 tasks={tasks}
 setTasks={setTasks}
 />
