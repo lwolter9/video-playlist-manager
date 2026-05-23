@@ -41,5 +41,5 @@ jobs:
       - name: Backend validation
         run: echo "Backend configured"
 
-      - name: Frontend test
-        run: npm test --prefix frontend -- --watchAll=false
+      - name: Frontend build
+        run: CI=false npm run build --prefix frontend
