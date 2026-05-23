@@ -1,516 +1,258 @@
-# \# 🎬 Video Playlist Manager
+# 🎬 Video Playlist Manager
 
-# 
+A full-stack MERN web application developed for **IFQ636 Software Lifecycle Management**.
 
-# A full-stack MERN web application developed for \*\*IFQ636 Software Lifecycle Management\*\*.
+The application allows users to create and manage video playlists while providing administrators with moderation capabilities. The system demonstrates software lifecycle management practices including planning, version control, CI/CD integration, cloud deployment and full-stack development.
 
-# 
+---
 
-# The application allows users to create and manage video playlists while providing administrators with moderation capabilities. The system demonstrates software lifecycle management practices including planning, version control, CI/CD integration, cloud deployment and full-stack development.
+## ✨ Features
 
-# 
+### User Features
 
-# \---
+- User registration
+- Secure login authentication
+- Create playlists
+- View playlists
+- Delete playlists
+- Add videos to playlists
+- Remove videos from playlists
+- Persistent login sessions
 
-# 
+### Administrator Features
 
-# \## ✨ Features
+- View all user playlists
+- Monitor system content
+- Remove inappropriate or unwanted playlists
 
-# 
+---
 
-# \### User Features
+## 🛠 Technology Stack
 
-# 
+### Frontend
 
-# \- User registration
+- React
+- React Router
+- Axios
 
-# \- Secure login authentication
+### Backend
 
-# \- Create playlists
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- JWT Authentication
+- bcrypt
 
-# \- View playlists
+### DevOps / Deployment
 
-# \- Delete playlists
+- GitHub
+- GitHub Actions CI/CD
+- AWS EC2
+- PM2 Process Manager
 
-# \- Add videos to playlists
+---
 
-# \- Remove videos from playlists
+## 📂 Project Structure
 
-# \- Persistent login sessions
+```text
+video-playlist-manager/
+│
+├── backend/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   └── server.js
+│
+├── frontend/
+│   ├── components/
+│   ├── context/
+│   ├── pages/
+│   └── App.js
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+│
+└── README.md
+```
 
-# 
+---
 
-# \### Administrator Features
+## ⚙ Local Setup
 
-# 
+### 1. Clone repository
 
-# \- View all user playlists
+```bash
+git clone https://github.com/lwolter9/video-playlist-manager.git
+```
 
-# \- Monitor system content
+Move into project folder:
 
-# \- Remove inappropriate or unwanted playlists
+```bash
+cd video-playlist-manager
+```
 
-# 
+---
 
-# \---
+### 2. Install dependencies
 
-# 
+Root:
 
-# \## 🛠 Technology Stack
+```bash
+npm install
+```
 
-# 
+Backend:
 
-# \### Frontend
+```bash
+npm install --prefix backend
+```
 
-# 
+Frontend:
 
-# \- React
+```bash
+npm install --prefix frontend
+```
 
-# \- React Router
+---
 
-# \- Axios
+### 3. Configure backend environment
 
-# 
+Create:
 
-# \### Backend
+```text
+backend/.env
+```
 
-# 
+Example:
 
-# \- Node.js
+```env
+MONGO_URI=your_connection_string
+JWT_SECRET=your_secret_key
+PORT=5001
+```
 
-# \- Express.js
+---
 
-# \- MongoDB Atlas
+### 4. Run application
 
-# \- Mongoose
+Backend:
 
-# \- JWT Authentication
+```bash
+npm run dev --prefix backend
+```
 
-# \- bcrypt
+Frontend:
 
-# 
+```bash
+npm start --prefix frontend
+```
 
-# \### DevOps / Deployment
+Application:
 
-# 
+```text
+Frontend:
+http://localhost:3000
 
-# \- GitHub
+Backend:
+http://localhost:5001
+```
 
-# \- GitHub Actions CI/CD
+---
 
-# \- AWS EC2
+## ☁ Deployment
 
-# \- PM2 Process Manager
+Hosted using:
 
-# 
+- AWS EC2
+- PM2
+- GitHub Actions CI/CD
 
-# \---
+Public deployment:
 
-# 
+```text
+YOUR_PUBLIC_IP_HERE
+```
 
-# \## 📂 Project Structure
+---
 
-# 
+## 🔐 Assessment Access
 
-# ```text
+Example credentials:
 
-# video-playlist-manager/
+Email:
 
-# │
+```text
+admin@test.com
+```
 
-# ├── backend/
+Password:
 
-# │   ├── controllers/
+```text
+password123
+```
 
-# │   ├── middleware/
+Replace with actual credentials if assessor access is required.
 
-# │   ├── models/
+---
 
-# │   ├── routes/
+## 🔄 Git Workflow
 
-# │   └── server.js
+Development followed a feature branch workflow:
 
-# │
+```text
+feature/project-setup
+feature/playlist-crud
 
-# ├── frontend/
+↓
 
-# │   ├── components/
+Pull Request
 
-# │   ├── context/
+↓
 
-# │   ├── pages/
+Merge into main
+```
 
-# │   └── App.js
+Version control activities included:
 
-# │
+- Feature branching
+- Pull requests
+- Merge conflict resolution
+- CI/CD validation
+- Incremental commits
 
-# ├── .github/
+---
 
-# │   └── workflows/
+## 🚀 CI/CD Pipeline
 
-# │       └── ci.yml
+GitHub Actions automatically performs:
 
-# │
+- Dependency installation
+- Backend validation
+- Frontend build verification
 
-# └── README.md
+Pipeline configuration:
 
-# ```
+```text
+.github/workflows/ci.yml
+```
 
-# 
+---
 
-# \---
+## 📚 Academic Context
 
-# 
+Unit:
 
-# \## ⚙ Local Setup
+**IFQ636 – Software Lifecycle Management**
 
-# 
+Queensland University of Technology
 
-# \### 1. Clone repository
+---
 
-# 
+## 👨‍💻 Author
 
-# ```bash
+Leroy Wolter
 
-# git clone https://github.com/lwolter9/video-playlist-manager.git
-
-# ```
-
-# 
-
-# Move into project folder:
-
-# 
-
-# ```bash
-
-# cd video-playlist-manager
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \### 2. Install dependencies
-
-# 
-
-# Root:
-
-# 
-
-# ```bash
-
-# npm install
-
-# ```
-
-# 
-
-# Backend:
-
-# 
-
-# ```bash
-
-# npm install --prefix backend
-
-# ```
-
-# 
-
-# Frontend:
-
-# 
-
-# ```bash
-
-# npm install --prefix frontend
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \### 3. Configure backend environment
-
-# 
-
-# Create:
-
-# 
-
-# ```text
-
-# backend/.env
-
-# ```
-
-# 
-
-# Example:
-
-# 
-
-# ```env
-
-# MONGO\_URI=your\_connection\_string
-
-# JWT\_SECRET=your\_secret\_key
-
-# PORT=5001
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \### 4. Run application
-
-# 
-
-# Backend:
-
-# 
-
-# ```bash
-
-# npm run dev --prefix backend
-
-# ```
-
-# 
-
-# Frontend:
-
-# 
-
-# ```bash
-
-# npm start --prefix frontend
-
-# ```
-
-# 
-
-# Application:
-
-# 
-
-# ```text
-
-# Frontend:
-
-# http://localhost:3000
-
-# 
-
-# Backend:
-
-# http://localhost:5001
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \## ☁ Deployment
-
-# 
-
-# Hosted using:
-
-# 
-
-# \- AWS EC2
-
-# \- PM2
-
-# \- GitHub Actions CI/CD
-
-# 
-
-# Public deployment:
-
-# 
-
-# ```text
-
-# YOUR\_PUBLIC\_IP\_HERE
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \## 🔐 Assessment Access
-
-# 
-
-# Example credentials:
-
-# 
-
-# Email:
-
-# 
-
-# ```text
-
-# admin@test.com
-
-# ```
-
-# 
-
-# Password:
-
-# 
-
-# ```text
-
-# password123
-
-# ```
-
-# 
-
-# Replace with actual credentials if assessor access is required.
-
-# 
-
-# \---
-
-# 
-
-# \## 🔄 Git Workflow
-
-# 
-
-# Development followed a feature branch workflow:
-
-# 
-
-# ```text
-
-# feature/project-setup
-
-# feature/playlist-crud
-
-# 
-
-# ↓
-
-# 
-
-# Pull Request
-
-# 
-
-# ↓
-
-# 
-
-# Merge into main
-
-# ```
-
-# 
-
-# Version control activities included:
-
-# 
-
-# \- Feature branching
-
-# \- Pull requests
-
-# \- Merge conflict resolution
-
-# \- CI/CD validation
-
-# \- Incremental commits
-
-# 
-
-# \---
-
-# 
-
-# \## 🚀 CI/CD Pipeline
-
-# 
-
-# GitHub Actions automatically performs:
-
-# 
-
-# \- Dependency installation
-
-# \- Backend validation
-
-# \- Frontend build verification
-
-# 
-
-# Pipeline configuration:
-
-# 
-
-# ```text
-
-# .github/workflows/ci.yml
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \## 📚 Academic Context
-
-# 
-
-# Unit:
-
-# 
-
-# \*\*IFQ636 – Software Lifecycle Management\*\*
-
-# 
-
-# Queensland University of Technology
-
-# 
-
-# \---
-
-# 
-
-# \## 👨‍💻 Author
-
-# 
-
-# Leroy Wolter
-
-# 
-
-# QUT Graduate Diploma in Information Technology (Computer Science)
-
+QUT Graduate Diploma in Information Technology (Computer Science)
