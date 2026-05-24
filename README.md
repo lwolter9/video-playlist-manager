@@ -185,16 +185,14 @@ Example credentials:
 Email:
 
 ```text
-admin@test.com
+test98@gmail.com
 ```
 
 Password:
 
 ```text
-password123
+test123
 ```
-
-Replace with actual credentials if assessor access is required.
 
 ---
 
