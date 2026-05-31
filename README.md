@@ -196,6 +196,35 @@ test123
 
 ---
 
+### Administrator Access
+
+The application includes an administrator moderation panel.
+
+To access the administrator dashboard:
+
+1. Log in using an administrator account.
+2. Navigate directly to:
+
+```
+/admin
+```
+
+For example:
+
+```
+http://localhost:3000/admin
+```
+
+or when deployed:
+
+```
+http://<deployment-address>/admin
+```
+
+The administrator dashboard allows authorised users to view and moderate user-created playlists.
+
+---
+
 ## 🔄 Git Workflow
 
 Development followed a feature branch workflow:
